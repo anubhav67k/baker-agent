@@ -1,4 +1,4 @@
-import { DocumentEdit20Regular, Person20Regular, Phone20Regular, ShoppingBag20Regular } from "@fluentui/react-icons";
+import { DocumentEdit20Regular, Person20Regular, Phone20Regular, ShoppingBag20Regular, Cake20Regular } from "@fluentui/react-icons";
 
 export interface QuickTask {
     id: string;
@@ -31,6 +31,12 @@ export const quickTasks: QuickTask[] = [
         title: "Draft a press release",
         description: "Write a press release about our current products.",
         icon: <DocumentEdit20Regular />,
+    },
+    {
+        id: "bake",
+        title: "Bake Cookies",
+        description: "Please bake 12 chocolate chip cookies for tomorrow's event.",
+        icon: <Cake20Regular />,
     },
 ];
 

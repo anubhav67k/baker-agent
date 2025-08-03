@@ -106,6 +106,17 @@ async def get_agents(session_id: str, user_id: str) -> Dict[str, Any]:
             agent_classes[agent_type]: agent for agent_type, agent in raw_agents.items()
         }
 
+        # --- BakerAgent registration START ---
+        from kernel_agents.baker_agent import BakerAgent
+        from kernel_agents.baker_tools import get_baker_tools
+        baker_tools = get_baker_tools()
+        # If you have a ToolAgent registry, register here (pseudo-code):
+        # await ToolAgent.register(runtime, "baker_tool_agent", lambda: ToolAgent("Baker tool execution agent", baker_tools))
+        # You may need to instantiate and add BakerAgent if not handled by AgentFactory
+        # Example (pseudo):
+        # agents['BakerAgent'] = BakerAgent(...)
+        # --- BakerAgent registration END ---
+
         # Cache the agents
         agent_instances[cache_key] = agents
 

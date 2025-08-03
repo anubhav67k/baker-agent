@@ -49,6 +49,7 @@ class AgentType(str, Enum):
     GROUP_CHAT_MANAGER = "Group_Chat_Manager"
     PLANNER = "Planner_Agent"
 
+    BAKER = "BakerAgent"
     # Add other agents as needed
 
 

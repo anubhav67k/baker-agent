@@ -90,6 +90,7 @@ class PlannerAgent(BaseAgent):
             AgentType.PROCUREMENT.value,
             AgentType.TECH_SUPPORT.value,
             AgentType.GENERIC.value,
+            AgentType.BAKER.value,
         ]
         self._agent_tools_list = {
             AgentType.HR: HrTools.generate_tools_json_doc(),
