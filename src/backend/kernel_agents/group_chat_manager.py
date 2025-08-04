@@ -74,6 +74,8 @@ class GroupChatManager(BaseAgent):
             AgentType.TECH_SUPPORT.value,
             AgentType.GENERIC.value,
             AgentType.BAKER.value,
+            AgentType.RETAIL.value,
+            AgentType.INSURANCE.value,
         ]
         self._agent_tools_list = agent_tools_list or []
         self._agent_instances = agent_instances or {}

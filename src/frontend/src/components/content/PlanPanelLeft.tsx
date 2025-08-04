@@ -124,6 +124,17 @@ const PlanPanelLeft: React.FC<PlanPanelLefProps> = ({ reloadTasks,restReload }) 
         </PanelLeftToolbar>
 
         <br />
+        {/* Domain/Agent Selection Sidebar */}
+        <div style={{ margin: '1em 0' }}>
+          <strong>Domains</strong>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li><strong>Retail</strong> <span style={{ marginLeft: 8 }}>{require('../../models/agentIcons').agentIcons['RetailAgent']}</span></li>
+            <li><strong>HR</strong> <span style={{ marginLeft: 8 }}>{require('../../models/agentIcons').agentIcons['Hr_Agent']}</span></li>
+            <li><strong>Insurance</strong> <span style={{ marginLeft: 8 }}>{require('../../models/agentIcons').agentIcons['InsuranceAgent']}</span></li>
+            <li><strong>Baker</strong> <span style={{ marginLeft: 8 }}>{require('../../models/agentIcons').agentIcons['BakerAgent']}</span></li>
+            {/* Add more as needed */}
+          </ul>
+        </div>
         <div
           className="tab tab-new-task"
           onClick={() => navigate("/", { state: { focusInput: true } })}

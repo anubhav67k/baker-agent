@@ -19,7 +19,13 @@ const PlanPanelRight: React.FC<TaskDetailsProps> = ({
             panelResize={true}
             panelType="first"
         >
-
+            {planData.steps.map((step) => (
+                <div key={step.id} className="plan-step" style={{ display: 'flex', alignItems: 'center', marginBottom: 8 }}>
+                    {agentIcons[step.agent] || agentIcons['Human_Agent']}
+                    <span style={{ marginLeft: 8 }}>{step.description}</span>
+                    <span style={{ marginLeft: 16, fontSize: '0.9em', color: '#888' }}>Status: {step.status}</span>
+                </div>
+            ))}
             <div >
                 <TaskDetails
                     planData={planData}

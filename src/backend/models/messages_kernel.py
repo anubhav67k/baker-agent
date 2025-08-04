@@ -50,6 +50,8 @@ class AgentType(str, Enum):
     PLANNER = "Planner_Agent"
 
     BAKER = "BakerAgent"
+    RETAIL = "RetailAgent"
+    INSURANCE = "InsuranceAgent"
     # Add other agents as needed
 
 

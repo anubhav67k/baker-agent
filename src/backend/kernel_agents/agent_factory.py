@@ -21,6 +21,8 @@ from kernel_agents.procurement_agent import ProcurementAgent
 from kernel_agents.product_agent import ProductAgent
 from kernel_agents.tech_support_agent import TechSupportAgent
 from kernel_agents.baker_agent import BakerAgent
+from kernel_agents.retail_agent import RetailAgent
+from kernel_agents.insurance_agent import InsuranceAgent
 from models.messages_kernel import AgentType, PlannerResponsePlan
 # pylint:disable=E0611
 from semantic_kernel.agents.azure_ai.azure_ai_agent import AzureAIAgent
@@ -43,6 +45,8 @@ class AgentFactory:
         AgentType.PLANNER: PlannerAgent,
         AgentType.GROUP_CHAT_MANAGER: GroupChatManager,  # Add GroupChatManager
         AgentType.BAKER: BakerAgent,
+        AgentType.RETAIL: RetailAgent,
+        AgentType.INSURANCE: InsuranceAgent,
     }
 
     # Mapping of agent types to their string identifiers (for automatic tool loading)
@@ -57,11 +61,15 @@ class AgentFactory:
         AgentType.PLANNER: AgentType.PLANNER.value,
         AgentType.GROUP_CHAT_MANAGER: AgentType.GROUP_CHAT_MANAGER.value,
         AgentType.BAKER: AgentType.BAKER.value,
+        AgentType.RETAIL: AgentType.RETAIL.value,
+        AgentType.INSURANCE: AgentType.INSURANCE.value,
     }
 
     # System messages for each agent type
     _agent_system_messages: Dict[AgentType, str] = {
         AgentType.BAKER: BakerAgent.default_system_message(),
+        AgentType.RETAIL: RetailAgent.default_system_message(),
+        AgentType.INSURANCE: InsuranceAgent.default_system_message(),
         AgentType.HR: HrAgent.default_system_message(),
         AgentType.MARKETING: MarketingAgent.default_system_message(),
         AgentType.PRODUCT: ProductAgent.default_system_message(),

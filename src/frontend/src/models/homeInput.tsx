@@ -38,6 +38,18 @@ export const quickTasks: QuickTask[] = [
         description: "Please bake 12 chocolate chip cookies for tomorrow's event.",
         icon: <Cake20Regular />,
     },
+    {
+        id: "retail-order",
+        title: "Process Retail Order",
+        description: "Process retail order #12345.",
+        icon: <ShoppingBag20Regular />,
+    },
+    {
+        id: "insurance-claim",
+        title: "Process Insurance Claim",
+        description: "Process insurance claim #67890.",
+        icon: <DocumentEdit20Regular />,
+    },
 ];
 
 export interface HomeInputProps {
